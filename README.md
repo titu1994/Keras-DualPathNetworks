@@ -37,6 +37,6 @@ model = DualPathNetwork(input_shape=(224, 224, 3),
 
 ## Support 
 - Keras does not have inbuilt support for grouped convolutions. Therefore I had to use lambda layers to match the ResNeXt paper implementation. When grouped convolution support is added, I hope to add it in this as well.
-- Mean Max Global Average Pooling support is present. 
+- Mean-Max Global Pooling support is present with the help of Lambda layer to scale the sum.
 - Depth and Filter_Increment must be lists for now, and must be lists of same length. Will think about adding support for integers, but I think list support is far more useful anyway, so I may not implement it.
 - Weight decay support is added, but disabled by default. The DPN paper does not mention it, but ResNet, WRN and ResNeXt paper may all use small weight regularization. Use a small value of `1e-4` or `5e-4` if you wish to use it.
