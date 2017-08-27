@@ -419,7 +419,6 @@ def _create_dpn(nb_classes, img_input, include_top, initial_conv_filters,
     filter_inc = filter_increment[0]
     filters = int(cardinality * width)
 
-    print("BLOCK %d" % 1)
     x = _dual_path_block(x, pointwise_filters_a=filters,
                          grouped_conv_filters_b=filters,
                          pointwise_filters_c=base_filters,
